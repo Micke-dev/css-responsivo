@@ -120,7 +120,7 @@ aside .noticia {
 
     .noticias {
         display: grid;
-        grid-template-columns: 49.5% 49.5%;
+        grid-template-columns: 47% 47%;
         column-gap: 1%;
         row-gap: 5%;
     }
@@ -163,6 +163,15 @@ aside .noticia {
     .botao-menu button {
         padding: 8px;
     }
+    
+    body {
+    columns: 2;
+    }
+
+    .noticia {
+        display: grid;
+        grid-template-columns: 100%;
+    }
 }
 
 @media screen and (min-width: 641px) and (max-width: 1023px) {
@@ -179,7 +188,11 @@ aside .noticia {
     }
 
     .noticias {
-        grid-template-columns: repeat(2, 49%);
+        grid-template-columns: repeat(2, 45%);
+    }
+
+    body {
+        columns: 2;
     }
 
 }
