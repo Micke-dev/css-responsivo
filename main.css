@@ -25,8 +25,8 @@ header {
 
 .submenu {
     display: none;
-    background-color: #fff;
     border: 1px solid red;
+    background-color: #fff;
     position: absolute;
     left: 0;
     width: 300px;
@@ -73,7 +73,7 @@ header {
 
 .destaque .noticia a {
     display: flex;
-    font-size: 2em;
+    font-size: 25px;
 }
 
 .destaque .noticia img {
@@ -86,7 +86,6 @@ section h2 {
 
 aside {
     padding-left: 40px;
-    margin-right: 100px;
 }
 
 aside .noticia {
@@ -95,7 +94,7 @@ aside .noticia {
 
 .noticias {
     display: grid;
-    grid-template-columns: 32.6% 32.6% 32.6%;
+    grid-template-columns: repeat(3,32.6%);
     column-gap: 1%;
     row-gap: 5%;
 }
@@ -108,10 +107,10 @@ aside .noticia {
     .container {
         max-width: 90%;
     }
-    
+
     .destaque .noticia a {
         display: block;
-        font-size: 1.5em;
+        font-size: 18px;
     }
     
     .destaque .noticia img {
@@ -120,13 +119,9 @@ aside .noticia {
 
     .noticias {
         display: grid;
-        grid-template-columns: 47% 47%;
-        column-gap: 1%;
+        grid-template-columns: repeat(1,98%);
+        column-gap: 2%;
         row-gap: 5%;
-    }
-
-    .noticias .noticia {
-        margin-bottom: 32px;
     }
 
     aside {
@@ -136,42 +131,6 @@ aside .noticia {
     header div.container {
         flex-direction: column;
     }
-
-    .submenu {
-        display: block;
-        width: 100%;
-        position: relative;
-        border: none;
-    }
-    
-    .menu > li {
-        clear: both;
-    }
-    
-    .submenu li {
-        display: block;
-        padding: 8px;
-    }
-
-    .botao-menu {
-        display: flex;
-        justify-content: center;
-        margin-top: 16px;
-        padding-bottom: 16px;
-    }
-
-    .botao-menu button {
-        padding: 8px;
-    }
-    
-    body {
-    columns: 2;
-    }
-
-    .noticia {
-        display: grid;
-        grid-template-columns: 100%;
-    }
 }
 
 @media screen and (min-width: 641px) and (max-width: 1023px) {
@@ -179,31 +138,17 @@ aside .noticia {
         max-width: 90%;
     }
 
-    .botao-menu {
-        display: none;
-    }
-
     .destaque .noticia a {
-        font-size: 1.5em;
+        font-size: 30px;
     }
 
     .noticias {
-        grid-template-columns: repeat(2, 45%);
+        grid-template-columns: repeat(2, 49%);
     }
-
-    body {
-        columns: 2;
-    }
-
 }
 
 @media screen and (min-width: 1024px) {
-    .botao-menu {
-        display: none;
-    }
-
     .noticias {
-        grid-template-columns: repeat(4, 24%);
+        display: flex;
     }
-
 }
